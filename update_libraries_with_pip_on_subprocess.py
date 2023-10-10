@@ -63,7 +63,7 @@ def update_lib():
             subprocess.Popen(["pip", "install", "-U", update_name], text=True, stdout=subprocess.PIPE)
         i += 1
     else:
-        print('更新終了')
+        print('Done')
             
 ######################################
 # execute funcitons
@@ -79,4 +79,4 @@ if names != []:
     #print(update_list)
     update_lib()     
 else:
-    print('更新すべきライブラリなどはありません')
+    print('No libraries to be updated')
