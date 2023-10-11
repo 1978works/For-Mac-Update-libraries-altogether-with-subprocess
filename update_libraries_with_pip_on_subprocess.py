@@ -4,7 +4,7 @@ import sys
 ######################################
 # def functions
 ######################################
-# f1 judge os
+# f1: Get OS info
 def judge_os():
     if sys.platform == 'darwin':
         os_name = 'mac'
@@ -15,7 +15,7 @@ def judge_os():
         
     return os_name
 
-# f2 make a Popen object from subprocess
+# f2: Make a Popen object by subprocess
 def make_popen_obj():
     if os_name != 'windows':
         popen_obj = subprocess.Popen(["pip", "list", "-o"], text=True, stdout=subprocess.PIPE).communicate(input=None, timeout=30)
@@ -42,7 +42,7 @@ def make_library_name_list():
         return name_list
 
 
-# f4: remove "\n"　from the #3 list
+# f4: remove "\n"　from the above f3
 def modify_name_list():
     for i in range(0, len(name_list)-1):
         if i%3 == 0 and '\n' in name_list[i]:
